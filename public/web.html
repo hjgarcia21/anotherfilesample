@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="img/x-icon" href="img/CSD-LOGO-FINAL-1005x1024.png">
+    <title>College Memories</title>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-4xl font-bold text-black p-2 ">College Mememories <span class="animate-bounce inline-block">🤙</span></a>
+            <ul class="flex space-x-6">
+                <li class="cursor-pointer hover:text-blue-500">
+                    <a href="#home" class="font-bold text-black text-2xl">Home</a>
+                </li>
+                <li class="cursor-pointer hover:text-blue-500">
+                    <a href="#gallery" class="font-bold text-black text-2xl">Gallery</a>
+                </li>
+                <li class="cursor-pointer hover:text-blue-500">
+                    <a href="#activities" class="font-bold text-black text-2xl">Activities</a>
+                </li>
+                <li class="cursor-pointer hover:text-blue-500">
+                    <a href="#about" class="font-bold text-black text-2xl">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-[url('img/group.jpg')] bg-cover bg-center">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+            <div class="text-center text-white">
+                <h1 class="font-bold text-5xl mb-4 ">
+                    Welcome to College Memories 
+                    
+                </h1>
+                <p class="max-w-md mx-auto text-lg">Relive the best moments of our college journey.</p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Custom styles for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .modal img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="font-bold text-4xl text-gray-800 mb-10">Memorable Moments</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/baligya.jpg" alt="baligya Daw" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Dakog halin</h3>
+                    <p class="text-gray-600">The day we all worked so hard for.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/padagat.jpg" alt="padagat" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Padagat w/o Me</h3>
+                    <p class="text-gray-600">An unforgettable journey with friends.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/seminarsaub.jpg" alt="Seminar" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Seminar sa UB</h3>
+                    <p class="text-gray-600">Bot lang kay natug raman mi.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/busognpod.jpg" alt="busog" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Busog Napod</h3>
+                    <p class="text-gray-600">Busog basta kami kasama.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/erst.jpg" alt="1styr" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">1styr</h3>
+                    <p class="text-gray-600">Aha na kaha ag uban?</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/2.jpg" alt="Teacher"class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Teacher's Day</h3>
+                    <p class="text-gray-600">Pa pic lang ni sir Spike.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/5.jpg" alt="batangQ"class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Batang Qute</h3>
+                    <p class="text-gray-600">KOYAA.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/4.jpg" alt="maam" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">STS</h3>
+                    <p class="text-gray-600">Ting katug lang klaseha.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/6.jpg" alt="wew" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">WEW</h3>
+                    <p class="text-gray-600">INIT.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/ayaw dai.jpg" alt="agay"class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Suwayig Pamiga diba PITII KA</h3>
+                    <p class="text-gray-600">I blank ang name sa uyab ni inday kay kalimot kos name .</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/alot.jpg" alt="alot" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Fiber Optictic</h3>
+                    <p class="text-gray-600">LRJ ang alot.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/3.jpg" alt="onepoint" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">One POINT ka sakenn</h3>
+                    <p class="text-gray-600">bag ong officials aw. Except ni kenz.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/boss.jpg" alt="Seminar" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Ipaglalaban Kita BossMADAM</h3>
+                    <p class="text-gray-600">Stay Strong Bossing.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/firsttime.jpg" alt="luoyon" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">First Time naka pamakals</h3>
+                    <p class="text-gray-600">Gitugtan nalang kay kaon mn.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/teachers's day.jpg" alt="day "class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Teacher's Day</h3>
+                    <p class="text-gray-600">Nang hatag aron naay plus points daw.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/boybastos.jpg" alt="boy" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">BOYBASTOS 🔞</h3>
+                    <p class="text-gray-600">Pag bag o na tawn.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/chachi.jpg" alt="che" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Chacheee</h3>
+                    <p class="text-gray-600">Angay ni ipares sa boybastos.</p>
+                </div>
+               
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/guard.jpg" alt="hulii" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Huliii ka guaardd</h3>
+                    <p class="text-gray-600">paborit bantayan ayy.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/eyy.jpg" alt="maam" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Maam Escabusa</h3>
+                    <p class="text-gray-600">Ni balik pag sunod semana.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/CMP.jpg" alt="maam" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">CMP</h3>
+                    <p class="text-gray-600">Libreng kaon before ma down.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/hbd.jpg" alt="maam" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">Busog napod</h3>
+                    <p class="text-gray-600">HBD sa pamangkin ni ITIN.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img src="img/koya.jpg" alt="maam" class="mb-4 rounded-lg cursor-pointer" onclick="openModal(this)">
+                    <h3 class="font-bold text-xl mb-2">KOYAA</h3>
+                    <p class="text-gray-600">Mga KOYAAA.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <video controls class="mb-4 rounded-lg w-full">
+                        <source src="media/tiktok.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3 class="font-bold text-xl mb-2">TIKTOKAR</h3>
+                    <p class="text-gray-600">Madam ayy nangulo sa kalihukan.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <video controls class="mb-4 rounded-lg w-full">
+                        <source src="media/tiktok2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3 class="font-bold text-xl mb-2">TIKTOKAR pt2</h3>
+                    <p class="text-gray-600">Ambot Madam uyyy.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Modal for Viewing and Zooming -->
+<div id="imageModal" class="modal flex">
+    <span class="text-white text-2xl cursor-pointer absolute top-5 right-5" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="">
+</div>
+
+<script>
+    function openModal(image) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "flex";
+        modalImg.src = image.src;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
+</script>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-20 bg-indigo-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="font-bold text-4xl mb-10">College Activities</h2>
+            <h3 class="font-bold text-2xl mb-10">But mostly mo dung ra para mag pa attendance</h3>
+            <h3 class="font-bold text-2xl mb-10">Iwas fines.. ✅</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-indigo-600 p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2">Sports</h3>
+                    <p>From basketball to Volleyball, we played them all.</p>
+                </div>
+                <div class="bg-indigo-600 p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2">Clubs & Societies</h3>
+                    <p>Engaging in various clubs to enhance our skills.</p>
+                </div>
+                <div class="bg-indigo-600 p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2">Workshops</h3>
+                    <p>Learning beyond the classroom with hands-on experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="font-bold text-4xl text-gray-800 mb-10">About Us</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600">We are a group of friends who cherish the memories made during our college years. From late-night study sessions to spontaneous road trips, these are the moments that define our journey.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 College Memories. All rights reserved©️.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

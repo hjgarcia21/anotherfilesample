@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-400 flex items-center justify-center min-h-screen">
+
+    <!-- Login container -->
+    <div class="w-full max-w-xs">
+        <!-- Navigation -->
+        <div class="flex justify-between mb-8 text-black font-bold">
+            <span>LOG IN</span>
+            <span>SIGN UP</span>
+        </div>
+        
+        <!-- Back arrow -->
+        <div class="flex justify-center mb-4">
+            <button class="rounded-full bg-gray-200 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Login box -->
+        <div class="bg-gray-300 p-8 rounded-lg shadow-md text-center">
+            <h2 class="text-xl font-bold mb-6">LOG IN</h2>
+
+            <!-- Username Input -->
+            <div class="flex items-center bg-gray-500 rounded-lg mb-4">
+                <span class="text-white px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                </span>
+                <input type="text" placeholder="USERNAME" class="w-full p-2 bg-gray-500 text-white placeholder-white outline-none">
+            </div>
+
+            <!-- Password Input -->
+            <div class="flex items-center bg-gray-500 rounded-lg mb-6">
+                <span class="text-white px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0c.879 0 1.746.276 2.478.768A2.995 2.995 0 0116 11c0 1.657-1.343 3-3 3H6c0-1.657 1.343-3 3-3z" />
+                    </svg>
+                </span>
+                <input type="password" placeholder="PASSWORD" class="w-full p-2 bg-gray-500 text-white placeholder-white outline-none">
+                <span class="text-white px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <!-- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A3.001 3.001 0 0012 16h-.243a3 3 0 01-1.957 2.824A9.02 9.02 0 015 12c0-2.252.826-4.303 2.18-5.912M15 9.882l4.243 4.243M18.657 12H19M9.88 5.757L7.757 7.88" /> -->
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Submit button -->
+            <a href="web.html"><button class="w-full bg-purple-600 text-white font-bold py-2 rounded-full mb-4">Log in</button></a>
+
+            <!-- Forgot password -->
+            <a href="forgotpass.html" class="text-black text-sm">FORGOT PASSWORD?</a>
+        </div>
+    </div>
+
+</body>
+</html>
